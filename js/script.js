@@ -1,3 +1,6 @@
+const copyMessage =
+    document.getElementById("copyMessage");
+
 const passwordHistory =
     document.getElementById("passwordHistory");
 const passwordInput =
@@ -96,15 +99,25 @@ generateBtn.addEventListener("click", function() {
         strength.textContent =
             "Strength: Weak";
 
+        strength.className =
+            "strength weak";
+
     } else if (passwordLength < 20) {
 
         strength.textContent =
             "Strength: Medium";
 
+        strength.className =
+            "strength medium";
+
     } else {
 
         strength.textContent =
             "Strength: Strong";
+
+        strength.className =
+            "strength strong";
+
     }
 
 });
@@ -123,6 +136,13 @@ copyBtn.addEventListener("click", function() {
         passwordInput.value
     );
 
-    alert("Password Copied!");
+    copyMessage.textContent =
+        "✅ Password Copied Successfully!";
+
+    setTimeout(() => {
+
+        copyMessage.textContent = "";
+
+    }, 2000);
 
 });

@@ -25,9 +25,9 @@ h1 {
 
 .generator-box {
     background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 input {
@@ -112,4 +112,29 @@ button:hover {
     margin-bottom: 8px;
     word-break: break-all;
     font-family: monospace;
+}
+
+.strength {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.weak {
+    color: red;
+}
+
+.medium {
+    color: orange;
+}
+
+.strong {
+    color: green;
+}
+
+#copyMessage {
+    text-align: center;
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
 }
