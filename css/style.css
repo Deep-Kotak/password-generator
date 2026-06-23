@@ -138,3 +138,19 @@ button:hover {
     font-weight: bold;
     margin-top: 10px;
 }
+
+.count-box {
+    margin-bottom: 20px;
+}
+
+.count-box label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.count-box select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+}

@@ -1,3 +1,6 @@
+const passwordCount =
+    document.getElementById("passwordCount");
+
 const copyMessage =
     document.getElementById("copyMessage");
 
@@ -84,7 +87,36 @@ generateBtn.addEventListener("click", function() {
 
     li.textContent = password;
 
-    passwordHistory.prepend(li);
+    passwordHistory.innerHTML = "";
+
+    const count =
+        parseInt(passwordCount.value);
+
+    for (let j = 0; j < count; j++) {
+
+        let password = "";
+
+        for (let i = 0; i < passwordLength; i++) {
+
+            const randomIndex =
+                Math.floor(Math.random() * chars.length);
+
+            password += chars[randomIndex];
+
+        }
+
+        const li =
+            document.createElement("li");
+
+        li.textContent = password;
+
+        passwordHistory.appendChild(li);
+
+        if (j === 0) {
+            passwordInput.value = password;
+        }
+
+    }
 
     if (passwordHistory.children.length > 5) {
 
