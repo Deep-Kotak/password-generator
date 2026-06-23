@@ -1,23 +1,38 @@
 const passwordInput = document.getElementById("password");
 const generateBtn = document.getElementById("generateBtn");
 
-const lengthSlider =
-    document.getElementById("lengthSlider");
+const lengthSlider = document.getElementById("lengthSlider");
+const lengthValue = document.getElementById("lengthValue");
 
-const lengthValue =
-    document.getElementById("lengthValue");
+const uppercase = document.getElementById("uppercase");
+const lowercase = document.getElementById("lowercase");
+const numbers = document.getElementById("numbers");
+const symbols = document.getElementById("symbols");
 
 lengthSlider.addEventListener("input", function() {
-
-    lengthValue.textContent =
-        lengthSlider.value;
-
+    lengthValue.textContent = lengthSlider.value;
 });
 
 generateBtn.addEventListener("click", function() {
 
-    const chars =
-        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
+    let chars = "";
+
+    if (uppercase.checked)
+        chars += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+    if (lowercase.checked)
+        chars += "abcdefghijklmnopqrstuvwxyz";
+
+    if (numbers.checked)
+        chars += "0123456789";
+
+    if (symbols.checked)
+        chars += "!@#$%^&*()_+-=[]{}";
+
+    if (chars.length === 0) {
+        alert("Select at least one option!");
+        return;
+    }
 
     let password = "";
 
@@ -33,5 +48,4 @@ generateBtn.addEventListener("click", function() {
     }
 
     passwordInput.value = password;
-
 });

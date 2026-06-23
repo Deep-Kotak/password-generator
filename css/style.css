@@ -67,3 +67,13 @@ button:hover {
 .length-box input {
     width: 100%;
 }
+
+.options {
+    margin-bottom: 20px;
+}
+
+.options label {
+    display: block;
+    margin: 8px 0;
+    font-size: 15px;
+}
