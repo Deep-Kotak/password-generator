@@ -1,3 +1,5 @@
+const passwordHistory =
+    document.getElementById("passwordHistory");
 const passwordInput =
     document.getElementById("password");
 
@@ -74,6 +76,20 @@ generateBtn.addEventListener("click", function() {
     }
 
     passwordInput.value = password;
+
+    const li = document.createElement("li");
+
+    li.textContent = password;
+
+    passwordHistory.prepend(li);
+
+    if (passwordHistory.children.length > 5) {
+
+        passwordHistory.removeChild(
+            passwordHistory.lastChild
+        );
+
+    }
 
     if (passwordLength < 10) {
 
