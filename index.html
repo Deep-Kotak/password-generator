@@ -16,17 +16,31 @@
 
     <h1>🔐 Password Generator</h1>
 
-    <div class="generator-box">
+  <input
+    type="text"
+    id="password"
+    placeholder="Click Generate Password"
+    readonly>
 
-        <input
-            type="text"
-            id="password"
-           placeholder="Click Generate Password"
-            readonly>
+<div class="length-box">
 
-        <button id="generateBtn">
-            Generate Password
-        </button>
+    <label>
+        Password Length:
+        <span id="lengthValue">12</span>
+    </label>
+
+    <input
+        type="range"
+        id="lengthSlider"
+        min="8"
+        max="32"
+        value="12">
+
+</div>
+
+<button id="generateBtn">
+    Generate Password
+</button>
 
     </div>
 

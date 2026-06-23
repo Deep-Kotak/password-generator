@@ -1,6 +1,19 @@
 const passwordInput = document.getElementById("password");
 const generateBtn = document.getElementById("generateBtn");
 
+const lengthSlider =
+    document.getElementById("lengthSlider");
+
+const lengthValue =
+    document.getElementById("lengthValue");
+
+lengthSlider.addEventListener("input", function() {
+
+    lengthValue.textContent =
+        lengthSlider.value;
+
+});
+
 generateBtn.addEventListener("click", function() {
 
     const chars =
@@ -8,7 +21,10 @@ generateBtn.addEventListener("click", function() {
 
     let password = "";
 
-    for (let i = 0; i < 12; i++) {
+    const passwordLength =
+        parseInt(lengthSlider.value);
+
+    for (let i = 0; i < passwordLength; i++) {
 
         const randomIndex =
             Math.floor(Math.random() * chars.length);

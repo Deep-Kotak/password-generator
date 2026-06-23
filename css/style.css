@@ -53,3 +53,17 @@ button {
 button:hover {
     background: #4338ca;
 }
+
+.length-box {
+    margin-bottom: 20px;
+}
+
+.length-box label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.length-box input {
+    width: 100%;
+}
