@@ -5,8 +5,7 @@
 
     <title>Password Generator</title>
 
-    <link rel="stylesheet"
-          href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -16,63 +15,77 @@
 
     <h1>🔐 Password Generator</h1>
 
-  <input
-    type="text"
-    id="password"
-    placeholder="Click Generate Password"
-    readonly>
+    <div class="generator-box">
 
-<div class="length-box">
+        <input
+            type="text"
+            id="password"
+            placeholder="Click Generate Password"
+            readonly>
 
-    <label>
-        Password Length:
-        <span id="lengthValue">12</span>
-    </label>
+        <button id="copyBtn">
+            Copy Password
+        </button>
 
-    <input
-        type="range"
-        id="lengthSlider"
-        min="8"
-        max="32"
-        value="12">
+        <p id="strength">
+            Strength: -
+        </p>
 
-</div>
+        <div class="length-box">
 
-<div class="options">
+            <label>
+                Password Length:
+                <span id="lengthValue">12</span>
+            </label>
 
-    <label>
-        <input type="checkbox"
-               id="uppercase"
-               checked>
-        Uppercase
-    </label>
+            <input
+                type="range"
+                id="lengthSlider"
+                min="8"
+                max="32"
+                value="12">
 
-    <label>
-        <input type="checkbox"
-               id="lowercase"
-               checked>
-        Lowercase
-    </label>
+        </div>
 
-    <label>
-        <input type="checkbox"
-               id="numbers"
-               checked>
-        Numbers
-    </label>
+        <div class="options">
 
-    <label>
-        <input type="checkbox"
-               id="symbols"
-               checked>
-        Symbols
-    </label>
+            <label>
+                <input
+                    type="checkbox"
+                    id="uppercase"
+                    checked>
+                Uppercase
+            </label>
 
-</div>
+            <label>
+                <input
+                    type="checkbox"
+                    id="lowercase"
+                    checked>
+                Lowercase
+            </label>
 
-<button id="generateBtn">
-    Generate Password
-</button>
+            <label>
+                <input
+                    type="checkbox"
+                    id="numbers"
+                    checked>
+                Numbers
+            </label>
+
+            <label>
+                <input
+                    type="checkbox"
+                    id="symbols"
+                    checked>
+                Symbols
+            </label>
+
+        </div>
+
+        <button id="generateBtn">
+            Generate Password
+        </button>
 
     </div>
 

@@ -1,17 +1,41 @@
-const passwordInput = document.getElementById("password");
-const generateBtn = document.getElementById("generateBtn");
+const passwordInput =
+    document.getElementById("password");
 
-const lengthSlider = document.getElementById("lengthSlider");
-const lengthValue = document.getElementById("lengthValue");
+const generateBtn =
+    document.getElementById("generateBtn");
 
-const uppercase = document.getElementById("uppercase");
-const lowercase = document.getElementById("lowercase");
-const numbers = document.getElementById("numbers");
-const symbols = document.getElementById("symbols");
+const copyBtn =
+    document.getElementById("copyBtn");
+
+const strength =
+    document.getElementById("strength");
+
+const lengthSlider =
+    document.getElementById("lengthSlider");
+
+const lengthValue =
+    document.getElementById("lengthValue");
+
+const uppercase =
+    document.getElementById("uppercase");
+
+const lowercase =
+    document.getElementById("lowercase");
+
+const numbers =
+    document.getElementById("numbers");
+
+const symbols =
+    document.getElementById("symbols");
+
 
 lengthSlider.addEventListener("input", function() {
-    lengthValue.textContent = lengthSlider.value;
+
+    lengthValue.textContent =
+        lengthSlider.value;
+
 });
+
 
 generateBtn.addEventListener("click", function() {
 
@@ -30,7 +54,9 @@ generateBtn.addEventListener("click", function() {
         chars += "!@#$%^&*()_+-=[]{}";
 
     if (chars.length === 0) {
+
         alert("Select at least one option!");
+
         return;
     }
 
@@ -48,4 +74,39 @@ generateBtn.addEventListener("click", function() {
     }
 
     passwordInput.value = password;
+
+    if (passwordLength < 10) {
+
+        strength.textContent =
+            "Strength: Weak";
+
+    } else if (passwordLength < 20) {
+
+        strength.textContent =
+            "Strength: Medium";
+
+    } else {
+
+        strength.textContent =
+            "Strength: Strong";
+    }
+
+});
+
+
+copyBtn.addEventListener("click", function() {
+
+    if (passwordInput.value === "") {
+
+        alert("Generate Password First!");
+
+        return;
+    }
+
+    navigator.clipboard.writeText(
+        passwordInput.value
+    );
+
+    alert("Password Copied!");
+
 });

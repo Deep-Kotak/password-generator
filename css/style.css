@@ -77,3 +77,18 @@ button:hover {
     margin: 8px 0;
     font-size: 15px;
 }
+
+#copyBtn {
+    margin-top: 10px;
+    background: #16a34a;
+}
+
+#copyBtn:hover {
+    background: #15803d;
+}
+
+#strength {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+}
